@@ -1,0 +1,61 @@
+plugins {
+	id 'fabric-loom' version '1.14-SNAPSHOT'
+	id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+	archivesName = project.archives_base_name
+}
+
+repositories {
+	maven { url 'https://maven.fabricmc.net/' }
+}
+
+configurations {
+	shade
+	implementation.extendsFrom(shade)
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	
+	// HTTP client for API calls - will be shaded into the JAR
+	shade 'com.squareup.okhttp3:okhttp:4.12.0'
+	shade 'com.squareup.okio:okio:3.6.0'
+	shade 'org.jetbrains.kotlin:kotlin-stdlib:1.9.21'
+}
+
+processResources {
+	inputs.property "version", project.version
+
+	filesMatching("fabric.mod.json") {
+		expand "version": project.version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 21
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
+}
+
+jar {
+	from("LICENSE") {
+		rename { "${it}_${project.base.archivesName.get()}"}
+	}
+	
+	from {
+		configurations.shade.collect { it.isDirectory() ? it : zipTree(it) }
+	}
+	
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}

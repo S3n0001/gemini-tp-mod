@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "geminitp",
+  "version": "${version}",
+  "name": "Gemini TP Mod",
+  "description": "AI-powered death teleportation using Gemini",
+  "authors": [
+    "YourName"
+  ],
+  "contact": {
+    "homepage": "https://github.com/yourusername/gemini-tp-mod",
+    "sources": "https://github.com/yourusername/gemini-tp-mod"
+  },
+  "license": "MIT",
+  "icon": "assets/geminitp/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.example.geminitp.GeminiTpMod"
+    ]
+  },
+  "mixins": [],
+  "depends": {
+    "fabricloader": ">=0.18.0",
+    "fabric-api": "*",
+    "minecraft": "~1.21.11",
+    "java": ">=21"
+  },
+  "suggests": {}
+}

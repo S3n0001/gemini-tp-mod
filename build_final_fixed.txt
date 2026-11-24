@@ -1,0 +1,104 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :
+Fabric Loom: 1.11.8
+
+> Task :clean
+
+> Task :compileJava FAILED
+C:\Users\Sailo Otomo\Downloads\ServerModsNewest\GeminiTP\src\main\java\com\example\geminitp\TeleportCommand.java:1: error: illegal character: '\ufeff'
+﻿package com.example.geminitp;
+^
+C:\Users\Sailo Otomo\Downloads\ServerModsNewest\GeminiTP\src\main\java\com\example\geminitp\TeleportCommand.java:1: error: class, interface, enum, or record expected
+﻿package com.example.geminitp;
+         ^
+C:\Users\Sailo Otomo\Downloads\ServerModsNewest\GeminiTP\src\main\java\com\example\geminitp\TeleportCommand.java:3: error: class, interface, enum, or record expected
+import com.mojang.brigadier.CommandDispatcher;
+^
+C:\Users\Sailo Otomo\Downloads\ServerModsNewest\GeminiTP\src\main\java\com\example\geminitp\TeleportCommand.java:4: error: class, interface, enum, or record expected
+import com.mojang.brigadier.arguments.StringArgumentType;
+^
+C:\Users\Sailo Otomo\Downloads\ServerModsNewest\GeminiTP\src\main\java\com\example\geminitp\TeleportCommand.java:5: error: class, interface, enum, or record expected
+import static com.mojang.brigadier.arguments.StringArgumentType.greedyString;
+^
+C:\Users\Sailo Otomo\Downloads\ServerModsNewest\GeminiTP\src\main\java\com\example\geminitp\TeleportCommand.java:6: error: class, interface, enum, or record expected
+import net.minecraft.server.command.ServerCommandSource;
+^
+C:\Users\Sailo Otomo\Downloads\ServerModsNewest\GeminiTP\src\main\java\com\example\geminitp\TeleportCommand.java:7: error: class, interface, enum, or record expected
+import net.minecraft.server.command.CommandManager;
+^
+C:\Users\Sailo Otomo\Downloads\ServerModsNewest\GeminiTP\src\main\java\com\example\geminitp\TeleportCommand.java:8: error: class, interface, enum, or record expected
+import net.minecraft.text.Text;
+^
+C:\Users\Sailo Otomo\Downloads\ServerModsNewest\GeminiTP\src\main\java\com\example\geminitp\TeleportCommand.java:9: error: class, interface, enum, or record expected
+import net.minecraft.server.network.ServerPlayerEntity;
+^
+C:\Users\Sailo Otomo\Downloads\ServerModsNewest\GeminiTP\src\main\java\com\example\geminitp\TeleportCommand.java:11: error: class, interface, enum, or record expected
+import java.util.List;
+^
+C:\Users\Sailo Otomo\Downloads\ServerModsNewest\GeminiTP\src\main\java\com\example\geminitp\TeleportCommand.java:12: error: class, interface, enum, or record expected
+import java.util.Map;
+^
+C:\Users\Sailo Otomo\Downloads\ServerModsNewest\GeminiTP\src\main\java\com\example\geminitp\TeleportCommand.java:13: error: class, interface, enum, or record expected
+import java.util.UUID;
+^
+12 errors
+
+[Incubating] Problems report is available at: file:///C:/Users/Sailo%20Otomo/Downloads/ServerModsNewest/GeminiTP/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler output below.
+  C:\Users\Sailo Otomo\Downloads\ServerModsNewest\GeminiTP\src\main\java\com\example\geminitp\TeleportCommand.java:1: error: class, interface, enum, or record expected
+  ﻿package com.example.geminitp;
+           ^
+  C:\Users\Sailo Otomo\Downloads\ServerModsNewest\GeminiTP\src\main\java\com\example\geminitp\TeleportCommand.java:3: error: class, interface, enum, or record expected
+  import com.mojang.brigadier.CommandDispatcher;
+  ^
+  C:\Users\Sailo Otomo\Downloads\ServerModsNewest\GeminiTP\src\main\java\com\example\geminitp\TeleportCommand.java:4: error: class, interface, enum, or record expected
+  import com.mojang.brigadier.arguments.StringArgumentType;
+  ^
+  C:\Users\Sailo Otomo\Downloads\ServerModsNewest\GeminiTP\src\main\java\com\example\geminitp\TeleportCommand.java:5: error: class, interface, enum, or record expected
+  import static com.mojang.brigadier.arguments.StringArgumentType.greedyString;
+  ^
+  C:\Users\Sailo Otomo\Downloads\ServerModsNewest\GeminiTP\src\main\java\com\example\geminitp\TeleportCommand.java:6: error: class, interface, enum, or record expected
+  import net.minecraft.server.command.ServerCommandSource;
+  ^
+  C:\Users\Sailo Otomo\Downloads\ServerModsNewest\GeminiTP\src\main\java\com\example\geminitp\TeleportCommand.java:7: error: class, interface, enum, or record expected
+  import net.minecraft.server.command.CommandManager;
+  ^
+  C:\Users\Sailo Otomo\Downloads\ServerModsNewest\GeminiTP\src\main\java\com\example\geminitp\TeleportCommand.java:8: error: class, interface, enum, or record expected
+  import net.minecraft.text.Text;
+  ^
+  C:\Users\Sailo Otomo\Downloads\ServerModsNewest\GeminiTP\src\main\java\com\example\geminitp\TeleportCommand.java:9: error: class, interface, enum, or record expected
+  import net.minecraft.server.network.ServerPlayerEntity;
+  ^
+  C:\Users\Sailo Otomo\Downloads\ServerModsNewest\GeminiTP\src\main\java\com\example\geminitp\TeleportCommand.java:11: error: class, interface, enum, or record expected
+  import java.util.List;
+  ^
+  C:\Users\Sailo Otomo\Downloads\ServerModsNewest\GeminiTP\src\main\java\com\example\geminitp\TeleportCommand.java:12: error: class, interface, enum, or record expected
+  import java.util.Map;
+  ^
+  C:\Users\Sailo Otomo\Downloads\ServerModsNewest\GeminiTP\src\main\java\com\example\geminitp\TeleportCommand.java:13: error: class, interface, enum, or record expected
+  import java.util.UUID;
+  ^
+  C:\Users\Sailo Otomo\Downloads\ServerModsNewest\GeminiTP\src\main\java\com\example\geminitp\TeleportCommand.java:1: error: illegal character: '\ufeff'
+  ﻿package com.example.geminitp;
+  ^
+  12 errors
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 8s
+2 actionable tasks: 2 executed

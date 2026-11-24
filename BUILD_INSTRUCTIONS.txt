@@ -1,0 +1,46 @@
+================================================================================
+GEMINI TP MOD - BUILD INSTRUCTIONS
+================================================================================
+
+IMPORTANT: Before building, you MUST have the Gradle Wrapper set up.
+
+OPTION 1: Download Pre-built Gradle Wrapper
+--------------------------------------------
+1. Download the gradle wrapper files from:
+   https://github.com/gradle/gradle/tree/master/gradle/wrapper
+   
+2. Create a folder: gradle/wrapper/
+   
+3. Place these files:
+   - gradle/wrapper/gradle-wrapper.jar
+   - gradle/wrapper/gradle-wrapper.properties
+
+OPTION 2: Generate Gradle Wrapper (if you have Gradle installed)
+----------------------------------------------------------------
+1. Open PowerShell in this directory
+2. Run: gradle wrapper --gradle-version 8.5
+3. This will create the wrapper files automatically
+
+OPTION 3: Use Gradle Directly (if you have Gradle installed)
+------------------------------------------------------------
+1. Open PowerShell in this directory
+2. Run: gradle build
+3. The mod JAR will be in: build/libs/
+
+================================================================================
+
+AFTER GETTING GRADLE WRAPPER:
+
+1. Set your GEMINI_API_KEY environment variable (see SETUP.md)
+
+2. Open PowerShell and run:
+   .\gradlew.bat build
+
+3. Find your mod at:
+   build/libs/gemini-tp-mod-1.0.0.jar
+
+4. Copy to your Minecraft mods folder!
+
+================================================================================
+
+For detailed setup instructions, see SETUP.md or README.md
